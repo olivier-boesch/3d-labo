@@ -9,13 +9,14 @@
 // dimensions ----------------
 // -- cuve
 epaisseur_plastique = 2.5;  //mm
-diametre_exterieur_haut_cuve = 106;  //mm
+diametre_exterieur_haut_cuve = 110;  //mm
 diametre_exterieur_bas_cuve = 92;  //mm
 hauteur_cuve = 87;  //mm
 diametre_interieur_haut_cuve = diametre_exterieur_haut_cuve-2 * epaisseur_plastique;
 diametre_interieur_bas_cuve = diametre_exterieur_bas_cuve - 2 * epaisseur_plastique;
 // -- tube
 diametre_tube = 14.4;  //mm
+ecart_tubes = 5;  //mm
 // -- pièce
 depassement_piece = 2 * epaisseur_plastique;  //mm
 longueur_piece = diametre_interieur_haut_cuve + depassement_piece;
@@ -25,7 +26,7 @@ epaisseur_piece = 5;  //mm
 hauteur_ergot = epaisseur_piece;  //mm
 epaisseur_ergot = 5;  //mm
 // -- tolérances
-tolerance_tube = 1;  //mm
+tolerance_tube = 0.5;  //mm
 tolerance_ergot = 2;  //mm
 
 //finesse (dégradée en preview)
@@ -37,8 +38,8 @@ translate([0,0,epaisseur_piece]) ergos();
 //installation en preview
 if($preview) translate([0,0,epaisseur_piece/2]) color("grey", 0.6){
     cuve();
-    translate([diametre_tube,0,hauteur_cuve-2]) tube();
-    translate([-diametre_tube,0,hauteur_cuve-2]) tube();
+    translate([diametre_tube/2+ecart_tubes/2,0,hauteur_cuve-2]) tube();
+    translate([-(diametre_tube/2+ecart_tubes/2),0,hauteur_cuve-2]) tube();
 }
 
 //parties --------------------
@@ -54,9 +55,11 @@ module corps(){
         }
         //trou tubes
         hull(){
-            translate([diametre_tube,0,0]) cylinder(d=diametre_tube + tolerance_tube, h=epaisseur_piece+0.2,center=true);
-            translate([-diametre_tube,0,0]) cylinder(d=diametre_tube + tolerance_tube, h=epaisseur_piece+0.2,center=true);
+            translate([diametre_tube/2+ecart_tubes/2,0,0]) cylinder(d=diametre_tube + tolerance_tube, h=epaisseur_piece+0.2,center=true);
+            translate([-(diametre_tube/2+ecart_tubes/2),0,0]) cylinder(d=diametre_tube + tolerance_tube, h=epaisseur_piece+0.2,center=true);
         }
+        //texte
+        translate([35,0,-2]) rotate([0,180,0])linear_extrude(10) text("StEx",font="Futura Md BT:style=Medium", valign="center", halign="center");
     }
 }
 
