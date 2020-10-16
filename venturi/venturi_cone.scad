@@ -64,13 +64,13 @@ if($preview){ //preview
     difference(){
         union(){
             venturi(d_ext_g, d_int_g, ep_g, l_g, d_ext_p, d_int_p, ep_p, l_p, l);
-            color("red", 0.3){
+            color("grey", 0.3){
                 translate([-l/2-28,0,0]) tube(d_ext_g, d_int_g, 30);
                 translate([+l/2+28,0,0]) tube(d_ext_p, d_int_p, 30);
             }
         }
-        a_cube = 200;
-        translate([0,a_cube/2,0]) cube(a_cube, center=true);
+        a_cube = l + l_g + l_p+1;
+        translate([0,-a_cube/2,0]) cube(a_cube, center=true);
     }
 }
 else{ // rendu
