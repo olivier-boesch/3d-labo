@@ -19,4 +19,4 @@ fichiers disponibles : source openscad, modele STL.
 
 ## Etude effet venturi : adapteur pour tube PVC
 
-![venturi cone](https://raw.githubusercontent.com/olivier-boesch/3d-labo/master/venturi/venturi_cone.png =400x)
+![venturi cone](https://raw.githubusercontent.com/olivier-boesch/3d-labo/master/venturi/venturi_cone.png)
