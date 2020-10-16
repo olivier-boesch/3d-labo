@@ -19,11 +19,7 @@ fichiers disponibles : source openscad, modele STL.
 
 ## Etude effet venturi : adapteur pour tube PVC
 
-Cône et supports pour effet Venturi (tubes de PVC de 80mm et 40mm)
-
-:::danger
-Non testé
-:::
+Cône et supports pour effet Venturi (tubes de PVC de 80mm et 40mm).
 
 ![venturi cone](https://raw.githubusercontent.com/olivier-boesch/3d-labo/master/venturi/venturi_cone.png)
 
