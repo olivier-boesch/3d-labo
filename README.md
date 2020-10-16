@@ -16,3 +16,7 @@ couvercle de remplacement pour piece cassée / perdue
 fichiers disponibles : source openscad, modele STL.
 
 ![couvercle calorimetre](https://raw.githubusercontent.com/olivier-boesch/3d-labo/master/calorimetre/couvercle_calorimetre.png)
+
+## Etude effet venturi : adapteur pour tube PVC
+
+![venturi cone](https://raw.githubusercontent.com/olivier-boesch/3d-labo/master/venturi/venturi_cone.png)
