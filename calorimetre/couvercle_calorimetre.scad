@@ -5,7 +5,7 @@
 *
 *   v1 : version initiale
 ********************************************************/
-use <shortcuts.scad>
+use <ShortCuts.scad>
 
 //------- plaque
 // epaisseur (mm)
@@ -26,7 +26,7 @@ h_cyl=10; // [5:50]
 ep_cyl = 1; // [1:20]
 
 //finnesse de rendu (meilleur en rendu / rapide en preview)
-$fn = $preview?50:300;
+$fn = $preview?100:300;
 
 module plaque(L,l,ep,d_ongle=15){
     d_cylinder = 2 * sqrt(pow(l/2,2) + pow(L-l/2,2));
