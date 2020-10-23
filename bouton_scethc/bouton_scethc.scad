@@ -34,7 +34,7 @@ h_trou = 4; //mm = position à partir du bas du bouton
 //-------- rendu
 
 //finesse
-$fn=200; //200 segments pour un cercle
+$fn=300; //300 segments pour un cercle
 
 //dessin du bouton en totalité
 bouton_scethc(d_bouton, h_bouton, ep_matiere_bouton, p_texte, d_teton, h_teton, h_tige, d_tige, p_trou, ep_matiere_tige, d_trou, h_trou);
