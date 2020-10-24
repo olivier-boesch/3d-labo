@@ -9,7 +9,7 @@
 // dimensions ----------------
 // -- cuve
 epaisseur_plastique = 2.5;  //mm
-diametre_exterieur_haut_cuve = 110;  //mm
+diametre_exterieur_haut_cuve = 150;  //mm
 diametre_exterieur_bas_cuve = 92;  //mm
 hauteur_cuve = 87;  //mm
 diametre_interieur_haut_cuve = diametre_exterieur_haut_cuve-2 * epaisseur_plastique;
@@ -30,7 +30,7 @@ tolerance_tube = 0.5;  //mm
 tolerance_ergot = 2;  //mm
 
 //finesse (dégradée en preview)
-$fn=$preview?40:200;
+$fn=$preview?40:100;
 
 //piece
 corps();
